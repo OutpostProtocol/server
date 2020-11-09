@@ -1,0 +1,13 @@
+# Runs a postgres database.
+postgres:
+  image: postgres:9.6-alpine
+  ports:
+    - '5432:5432'
+  environment:
+    POSTGRES_USER: 'user'
+    POSTGRES_PASSWORD: 'password'
+    POSTGRES_DB: 'outpost'
+  volumes:
+    - ./quickstart:/docker-entrypoint-initdb.d/
+
+# sudo docker-compose -f quickstart.yml up

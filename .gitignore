@@ -1,0 +1,12 @@
+# Don't persist node_modules.
+node_modules
+# Ignore dotenvs.
+.env*
+# Example .env configuration should not be ignored.
+!.env.example
+# Encrypted wallet location.
+wallet.sec
+# Quickstart wallet location.
+wallet.json
+
+scripts/publications.ts

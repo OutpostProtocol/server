@@ -1,0 +1,1 @@
+export { dbHandler } from './models'
