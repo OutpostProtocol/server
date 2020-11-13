@@ -84,6 +84,7 @@ const typeDefs = gql`
     readRequirement: Int
     tokenSymbol: String
     tokenAddress: String
+    hasSubscription: Boolean
   }
 
   type Post {

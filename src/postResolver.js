@@ -22,10 +22,10 @@ const getPost = async (_, { txId }, { dataSources, user }) => {
   }
   const ethAddr = user.address
 
-  const { userBalance, tokenSymbol } = await dataSources.balances.getBalance(ethAddr, tokenAddress)
+  const hasSubscription = await dataSources.balances.getSubscription(ethAddr)
 
   let postText = null
-  if (userBalance >= readRequirement || postInfo.user.address === ethAddr) {
+  if (hasSubscription || postInfo.user.address === ethAddr) {
     postText = postInfo.postText
   }
 
@@ -35,8 +35,7 @@ const getPost = async (_, { txId }, { dataSources, user }) => {
       postText
     },
     comments,
-    userBalance,
-    tokenSymbol,
+    hasSubscription,
     tokenAddress,
     readRequirement
   }

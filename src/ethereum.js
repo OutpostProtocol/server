@@ -2,7 +2,7 @@ import { ethers } from 'ethers'
 
 export const AUTH_TOKEN = 'Outpost needs this signature to authenticate you.\n\nTime: '
 
-export const provider = new ethers.providers.InfuraProvider('homestead', {
+export const provider = new ethers.providers.InfuraProvider('goerli', {
   projectId: process.env.INFURA_ID,
   projectSecret: process.env.INFURA_SECRET
 })

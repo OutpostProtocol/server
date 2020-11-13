@@ -29,6 +29,10 @@ const getPostModel = (sequelize, DataTypes) => {
     readRequirement: {
       type: DataTypes.INTEGER
     },
+    subscriptionRequirement: {
+      type: DataTypes.INTEGER,
+      default: 1
+    },
     encryptionInfo: {
       type: DataTypes.JSON
     },
